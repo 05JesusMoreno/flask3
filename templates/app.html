@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilo.css') }}">
+
+    <title>App Datos Alumno</title>
+</head>
+<body>
+    <div class="container1">
+        <div class="container">
+            <h1>Jesus Bautista Moreno 9 A</h1>
+            <img class="img" src="{{ url_for('static', filename='OIP.jpeg') }}" >
+            <div class="form-group">
+                <form action="enviar_mensaje.php" method="POST">
+                  <h3>Mensaje</h3>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                
+                    <input type="submit" value="Enviar mensaje">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
